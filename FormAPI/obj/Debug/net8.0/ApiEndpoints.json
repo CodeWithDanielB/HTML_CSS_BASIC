@@ -3,7 +3,7 @@
     "ContainingType": "FormAPI.Controllers.ValuesController",
     "Method": "Get",
     "RelativePath": "api/form/details",
-    "HttpMethod": "GET",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [],

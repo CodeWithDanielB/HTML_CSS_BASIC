@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FormAPI.Controllers
@@ -6,10 +7,12 @@ namespace FormAPI.Controllers
     //[Route("api/[controller]")]
     [Route("api/form/details")]
     [ApiController]
+
+    [EnableCors("AllowSpecificOrigin")]
     public class ValuesController : ControllerBase
     {
-        [HttpGet]
-        public ActionResult<string> Get()
+        [HttpPost]
+        public ActionResult<string> PostFormData()
         {
             var formData = new FormAPI.Model.Model();
 
@@ -22,7 +25,7 @@ namespace FormAPI.Controllers
 
             Console.WriteLine(formData.first_name);
 
-            return NoContent();
+            return "ok";
         }
     }
 }
