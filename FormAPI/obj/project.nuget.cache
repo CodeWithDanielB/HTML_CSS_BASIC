@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "fVHN5yAK71ENOG2LTSpR/vY9iB0Swy7L4S9JbopSytEO6n3wry4PlLzgrCMXwoJmk14ucSirEYhbYe1dR8cBnw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\IMS-QA\\Desktop\\HTML\\HTML_CSS_BASIC\\FormAPI\\FormAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\IMS-QA\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\IMS-QA\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\IMS-QA\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\IMS-QA\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\IMS-QA\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\IMS-QA\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}

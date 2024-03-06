@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="design.css">
 </head>
 <body>
+
     <!--Header starts here-->
     <header class="header">
         <div class="wrapper">
@@ -35,18 +36,18 @@
             <!--contact details-->
             <div class="booking-details">
                 <h3 class="pop-up-effect">Contact Us</h3><br><br>
-                <form action="">
+                <form  action="">
                     <span class="name">First Name</span>
-                    <input type="text" name="first_name" placeholder="First Name Please"><br>
+                    <input id="fir" type="text" name="first_name" placeholder="First Name Please" pattern="^[a-zA-Z]+$" required><br>
 
                     <span class="name">Last Name</span>
-                    <input type="text" name="last_name" placeholder="Last Name Please"><br>
+                    <input id="las" type="text" name="last_name" placeholder="Last Name Please" pattern="^[a-zA-Z]+$" required><br>
 
                     <span class="name">E-Mail</span>
-                    <input type="email" name="E-Mail" placeholder="E-Mail Please"><br>
+                    <input id="ema" type="email" name="E-Mail" placeholder="E-Mail Please" required><br>
 
                     <span class="name">Address</span>
-                    <textarea name="address" placeholder="Your Address Please"></textarea><br>
+                    <textarea id="add" name="address" placeholder="Your Address Please"></textarea><br>
 
                     <input type="submit" name="submit" class="btn-submit" placeholder="SEND">
                     <input type="reset" name="reset" class="btn-submit" placeholder="RESET">
@@ -63,6 +64,37 @@
             <p>&copy; <a href="structure.html">Home Hub</a>. All rights reserved 2023.</p>
         </div>
     </footer>
+        <!--script for json in console-->
+        <script>
+        let form = document.querySelector('form');
+        form.addEventListener('submit', submithandle);
+
+        function submithandle(event)
+        {
+            event.preventDefault();
+            let formData = new FormData(form);
+            let data = Object.fromEntries(formData);
+            let json = JSON.stringify(data);
+
+            fetch('https://jsonplaceholder.typicode.com/todos/1', 
+            {
+                method: 'POST',
+                headers:{ 'Content-Type' : 'application/json' },
+                body: json
+            })
+            .then(res => res.json())
+            .then(result => console.log(result))
+            .catch(err => console.log(err));
+
+            document.getElementById('fir').value=''
+            document.getElementById('las').value=''
+            document.getElementById('ema').value=''
+            document.getElementById('add').value=''
+
+        }
+
+    </script>
+   
 
 </body>
 </html>
