@@ -44,7 +44,7 @@
                     <input id="las" type="text" name="last_name" placeholder="Last Name Please" pattern="^[a-zA-Z]+$" required><br>
 
                     <span class="name">E-Mail</span>
-                    <input id="ema" type="email" name="E-Mail" placeholder="E-Mail Please" required><br>
+                    <input id="ema" type="email" name="E_Mail" placeholder="E-Mail Please" required><br>
 
                     <span class="name">Address</span>
                     <textarea id="add" name="address" placeholder="Your Address Please"></textarea><br>
@@ -76,7 +76,7 @@
             let data = Object.fromEntries(formData);
             let json = JSON.stringify(data);
 
-            fetch('https://jsonplaceholder.typicode.com/todos/1', 
+            fetch('https://localhost:7019/api/form/details', 
             {
                 method: 'POST',
                 headers:{ 'Content-Type' : 'application/json' },
