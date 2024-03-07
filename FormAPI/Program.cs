@@ -1,3 +1,8 @@
+using FormAPI.Context;
+using Microsoft.EntityFrameworkCore;
+using Dapper;
+using FormAPI.FormDataDal;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,7 +11,7 @@ builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+builder.Services.AddTransient<DapperContext>();
 
 builder.Services.AddCors(options =>
 {
@@ -17,6 +22,9 @@ builder.Services.AddCors(options =>
                    
       
 });
+
+
+builder.Services.AddTransient<FormDataDal1, FormDataDal1>();
 
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

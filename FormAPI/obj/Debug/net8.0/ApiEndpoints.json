@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "formData",
-        "Type": "FormAPI.Model.Model",
+        "Type": "FormAPI.Model.FormModel",
         "IsRequired": true
       }
     ],
