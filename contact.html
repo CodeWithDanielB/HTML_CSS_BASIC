@@ -44,7 +44,7 @@
                     <input id="las" type="text" name="last_name" placeholder="Last Name Please" pattern="^[a-zA-Z]+$" required><br>
 
                     <span class="name">E-Mail</span>
-                    <input id="ema" type="email" name="EMail" placeholder="E-Mail Please" required><br>
+                    <input id="ema" type="email" name="E_Mail" placeholder="E-Mail Please" required><br>
 
                     <span class="name">Address</span>
                     <textarea id="add" name="address" placeholder="Your Address Please"></textarea><br>
@@ -76,15 +76,21 @@
             let data = Object.fromEntries(formData);
             let json = JSON.stringify(data);
 
-            fetch('https://localhost:7019/api/form/details', 
+            fetch('http://localhost:5001/api/Values', 
             {
                 method: 'POST',
-                headers:{ 'Content-Type' : 'application/json' },
+                headers:{"Content-Type": "application/json; charset=UTF-8; Access-Control-Allow-Origin: *"},
                 body: json
             })
-            .then(res => res.json())
-            .then(result => console.log(result))
-            .catch(err => console.log(err));
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error('Error:', error));
+      
+        
+
+            // .then(res => res.json())
+            // .then(result => console.log(result))
+            // .catch(err => console.log(err));
 
             document.getElementById('fir').value=''
             document.getElementById('las').value=''

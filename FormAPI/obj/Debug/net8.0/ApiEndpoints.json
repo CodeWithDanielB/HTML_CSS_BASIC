@@ -1,12 +1,18 @@
 [
   {
     "ContainingType": "FormAPI.Controllers.ValuesController",
-    "Method": "Get",
-    "RelativePath": "api/form/details",
+    "Method": "PostValues",
+    "RelativePath": "api/Values",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "formData",
+        "Type": "FormAPI.Model.Model",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
         "Type": "System.String",
